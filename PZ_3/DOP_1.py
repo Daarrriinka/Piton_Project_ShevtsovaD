@@ -2,6 +2,7 @@ a = float(input("Введите первое число a: "))
 b = float(input("Введите второе число b: "))
 c = a * b
 if c < 0:
-    print(c * 8)
+    c *= 8
 else:
-    print(c * 1.5)
+    c *= 1.5
+print(f"Результат: {c}")
