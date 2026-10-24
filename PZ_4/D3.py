@@ -1,6 +1,7 @@
+# Найти и вывести на экран квадраты и кубы чисел от 2 до 5.
 num = 2
 while num <= 5:
-    sq = num * num
-    cb = num * num * num
+    sq = num**2
+    cb = num**3
     print(f"Число: {num}, Квадрат: {sq}, Куб: {cb}")
     num += 1
