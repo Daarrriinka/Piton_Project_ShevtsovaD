@@ -8,3 +8,4 @@ m = int(input("Введите числo "))
 n = int(input("Введите числo "))
 print("Периметр: ", per(m, n), "Площадь: ", area(m, n))
 
+

@@ -8,7 +8,6 @@
 
 def InvertDigits(K):
     r = 0
-
     while K > 0:
         digit = K % 10
         r = r * 10 + digit

@@ -7,7 +7,6 @@ def stars(m):
     while i <= m:
         print('*' * i)
         i += 1
-
 m = 0
 while True:
     try:
