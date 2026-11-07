@@ -8,25 +8,30 @@
 
 def InvertDigits(K):
     r = 0
+    #цикл выполняется пока условие верно
     while K > 0:
         digit = K % 10
         r = r * 10 + digit
         K //= 10
-
+#возврат числа
     return r
 count = 0
+#бесконечный цикл
 while True:
     try:
         K = int(input("Введите целое положительное число: "))
     except ValueError:
+        #обработка ошибки
         print("Ошибка! Введите целое положительное число.")
         continue
 
     if K <= 0:
         print("Ошибка! Введите положительное число")
+        #переход на следующую итерацию
         continue
 
     print("Перевёрнутое число:", InvertDigits(K))
     count += 1
     if count == 5:
+        #выход из цикла
         break
