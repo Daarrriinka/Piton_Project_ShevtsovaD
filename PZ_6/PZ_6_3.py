@@ -38,3 +38,38 @@ print("Точка с минимальной суммой расстояний:")
 print("X =", X[k])
 print("Y =", Y[k])
 print("Сумма расстояний:", round(A[k], 2))
+
+import random
+import math
+
+x = []
+y = []
+
+n = int(input("Введите количество точек (больше 2): "))
+
+while len(x) < n:
+    x.append(random.randint(-10, 10))
+    y.append(random.randint(-10, 10))
+
+print("Координаты точек:")
+
+for i in range(n):
+    print("Точка", i + 1, ":", x[i], y[i])
+
+min_sum = float('inf')
+best_point = 0
+
+for i in range(n):
+    total = 0
+
+    for j in range(n):
+        if i != j:
+            r = math.sqrt((x[j] - x[i])**2 + (y[j] - y[i])**2)
+            total += r
+
+    if total < min_sum:
+        min_sum = total
+        best_point = i
+
+print("Искомая точка:", x[best_point], y[best_point])
+print("Минимальная сумма расстояний:", round(min_sum, 2))
