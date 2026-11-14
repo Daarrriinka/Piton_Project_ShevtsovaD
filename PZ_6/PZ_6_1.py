@@ -22,27 +22,3 @@ for i in range(1, N):
         break
 
 print("Результат:", k)
-
-import random
-
-a = []
-n = int(input("Введите размер списка: "))
-
-while len(a) < n:
-    x = random.randint(-50, 50)
-    if x != 0:
-        a.append(x)
-
-print("Исходный список:", a)
-
-result = 0
-
-for i in range(1, len(a)):
-    if a[i] > 0 and a[i-1] > 0:
-        result = i + 1
-        break
-    if a[i] < 0 and a[i-1] < 0:
-        result = i + 1
-        break
-
-print("Результат:", result)
